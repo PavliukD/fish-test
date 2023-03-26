@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "../api/api";
 
-import { Product, NewProduct } from "../utils/types";
+import { Product } from "../utils/types";
 
 type Data = Product[]
 
@@ -13,6 +13,7 @@ export const fetchProducts = createAsyncThunk<Data, undefined, {rejectValue: str
         if (!data) {
             return rejectWithValue('Can`t get data. Server error')
         }
+
         return data
     }
 )
@@ -25,6 +26,7 @@ export const addProduct = createAsyncThunk(
         if (!data) {
             return rejectWithValue('Can`t add new product. Server error')
         }
+        
         return data as Product
     }
 )

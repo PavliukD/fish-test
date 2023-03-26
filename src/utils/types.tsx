@@ -1,14 +1,11 @@
 export type Product = {
-    id: number;
+    id?: number;
     title: string;
     category: string;
     price: number;
     brand: string;
-}
-
-export type NewProduct = {
-    title: string;
-    category: string;
-    price: number;
-    brand: string;
+    thumbnail: string;
+    description: string;
+    rating?: number;
+    stock?: number;
 }

@@ -21,6 +21,6 @@ export const api = {
     },
     add: async (newProduct: Product) => {
         const resp = await axios.post('/products/add', newProduct)
-
+        return resp
     }
 }
